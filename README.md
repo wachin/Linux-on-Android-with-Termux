@@ -9,7 +9,7 @@ Antes de seguir, si ustedes no van a usar git, no lean las partes de este tutori
 ## Instalar yt-dlp
 Después de instalar Termux y git podrán instalar yt-dlp, dejo aparte la instalación:
 
-- [yt-dlp](https://github.com/wachin/Instalar-git-en-Android-con-Termux/blob/main/Instalar%20yt-dlp%20en%20Termux%20en%20Android%20para%20descargar%20videos%2C%20audios%2C%20de%20YouTube.md)
+- [yt-dlp](/ES/Instalar-yt-dlp.md)
 
 
 
