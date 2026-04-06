@@ -1,3 +1,5 @@
+# Sincronizar git en Android en Termux sin que se dañe el repositorio, ejemplo para Obsidian
+
 Estaba usando **Obsidian en Android 16** el cual tiene mi celular Samsung Galaxy A15 y lo sincronicé (git fetch git add . git etc, etc) con **GitHub usando Termux** (en un repositorio que había creado), y funcionaba, pero después de algunas semanas me pasó un error al hacer la sincronización en Termux con `git push` y me dió un error:
 
 ```
