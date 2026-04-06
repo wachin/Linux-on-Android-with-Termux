@@ -653,7 +653,7 @@ Ahora edite algún archivo o carpeta desde algún Administrador de archivos de A
 
 vea todas las explicaciones de cómo usarlos en este apartado:
 
-[Editar archivos de repositorios git en Android desde editores o administradores de archivos Apps](file:///ES/Editar-desde-editor-o-administrador-de-archivos.md)
+[Editar archivos de repositorios git en Android desde editores o administradores de archivos Apps](/ES/Editar-desde-editor-o-administrador-de-archivos.md)
 
 ahora agregelo y súba el cambio a GitHub con ejemplo con las siguientes indicaciones:
 
