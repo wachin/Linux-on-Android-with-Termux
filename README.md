@@ -265,13 +265,14 @@ But if it comes out like this:
 │ Do you want to choose a mirror group or a single   │
 │ mirror? Select with space.                         │
 │ ┌────────────────────────────────────────────────┐ │
-│ │(*) Mirror groupRotate between several mirrors (│ │
+│ │(*) Mirror groupRotate between several mirrors  │ │
 │ │( ) Single mirroChoose a single mirror to use   │ │
 │ │                                                │ │
 │ │                                                │ │
 │ │                                                │ │
 │ └────────────────────────────────────────────────┘ │
-├────────────────────────────────────────────────────┤  │             <  OK  >       <Cancel>
+├────────────────────────────────────────────────────┤
+│             <  OK  >       <Cancel>                |
 ```
 
 Choose from below:
@@ -284,9 +285,10 @@ And when it comes out like this:
 
 ```
 ┌──────────termux-change-repo────────────┐
-│ Which group of mirrors do you want to  │  │ use? Select with space.                │
+│ Which group of mirrors do you want to  │
+│ use? Select with space.                │  
 │ ┌────────────────────────────────────┐ │
-│ │(*) All mirrors All in the entire world│ │
+│ │(*) All mirrors All in the ent world│ │
 │ │( ) Mirrors in AAll in Asia (excl. C│ │
 │ │( ) Mirrors in CAll in Chinese Mainl│ │
 │ │( ) Mirrors in EAll in Europe       │ │
@@ -297,7 +299,7 @@ And when it comes out like this:
 │ │                                    │ │
 │ └────────────────────────────────────┘ │
 ├────────────────────────────────────────┤
-│         <  OK  >     <Cancel>
+│         <  OK  >     <Cancel>          |
 ```
 
 I pressed Enter on the first option:
@@ -313,11 +315,11 @@ But you could choose some special if one wants a mirror from some of those zones
 If it is the second time (these options may vary from one Termux version to another) that you do this process it may appear like this:
 
 ```
-Do you want to choose a mirror group  
-│ or a single mirror? Select with space.
-│(*) Mirror grRotate between several │
-│( ) Single miChoose a single mirror┤
-│         <  OK  >     <Cancel>
+|Do you want to choose a mirror group   |
+│ or a single mirror? Select with space.|
+│(*) Mirror grRotate between several    │
+│( ) Single miChoose a single mirror    |
+│         <  OK  >     <Cancel>         |
 ```
 
 in this case click on the second option so that that one marked (same as before described):
