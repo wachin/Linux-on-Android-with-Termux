@@ -1,249 +1,245 @@
-# Termux en Android para instalar programas de terminal de Linux como: git, yt-dlp, nnn, tree, y otros
+# Termux on Android to install Linux terminal programs like: git, yt-dlp, nnn, tree, and others
 
-**Actualizado: 2026**
+**Updated: 2026**
 
-Termux es un emulador de terminal y entorno Linux para Android que permite instalar y usar git como lo haríamos desde una terminal de Linux. También se pueden instalar otros programas como yt-dlp (para descargar videos de YouTube), nnn (Administrador de Archivos), tree, y otros que se puedan usar desde la terminal.
+Termux is a terminal emulator and Linux environment for Android that allows you to install and use git as you would from a Linux terminal. You can also install other programs like yt-dlp (for downloading YouTube videos), nnn (File Manager), tree, and others that can be used from the terminal.
 
-Antes de seguir, si ustedes no van a usar git, no lean las partes de este tutorial en las que se explican uso, y configuraciones de git, pero si lo piden instalar aunque no lo vayan a usar, lo que pasa es que para mí es una manera de verificar que puedan instalar otros programas de terminal en Termux.
+Before proceeding, if you are not going to use git, do not read the parts of this tutorial that explain git usage and configurations, but if you want to install it even if you are not going to use it, the thing is that for me it is a way to verify that you can install other terminal programs in Termux.
 
-## Instalar yt-dlp
-Después de instalar Termux y git podrán instalar yt-dlp, dejo aparte la instalación:
+## Install yt-dlp
+After installing Termux and git you can install yt-dlp, I leave the installation separately:
 
 - [yt-dlp](/ES/Instalar-yt-dlp.md)
 
+## Why this tutorial
 
-
-## El porqué de este tutorial
-
-En Linux (MX Linux 21) estoy usando git como un tipo de almacenamiento en la nube, similar a:
+On Linux (MX Linux 21) I am using git as a type of cloud storage, similar to:
 
 - Dropbox
 - MEGA
 - Google Drive
 
-Esto mismo se puede hacer con git desde un celular Android usando Termux para tener archivos offline.
+The same can be done with git from an Android phone using Termux to have files offline.
 
-**Ejemplo:** He creado un cancionero con acordes de guitarra para usarlo desde el celular con Android y desde el ordenador con Linux:
+**Example:** I have created a songbook with guitar chords to use it from the Android phone and from the Linux computer:
 
 [https://github.com/wachin/Cancionero](https://github.com/wachin/Cancionero)
 
-> Nota: Con la app de GitHub de Microsoft en la Play Store no se puede hacer todo lo que se puede hacer con git desde la terminal de Termux.
->
+> Note: With the Microsoft GitHub app in the Play Store, you cannot do everything that can be done with git from the Termux terminal.
 
 ### Pros
-- Archivos offline en el celular
+- Offline files on the phone
 
-### Contras
-- Sincronización manual
-- Un repo de git contiene una copia de sus archivos en la carpeta oculta .git, por lo cual ocupará el doble de espacio o más
-- Para usuarios avanzados que sepan de control de versiones con git
-- Usar la terminal
-- Si no tiene cuidado si editar un archivo el repositorio se puede dañar.
+### Cons
+- Manual synchronization
+- A git repo contains a copy of its files in the hidden .git folder, so it will take double the space or more
+- For advanced users who know version control with git
+- Using the terminal
+- If you are not careful when editing a file, the repository can be damaged.
 
-#### Como evitar que mi repositorio se dañe al editar un archivo
+#### How to avoid damaging my repository when editing a file
 
-Cuando edites un archivo de un repositorio que haya si clonado en el Almacenamiento Interno:
+When you edit a file from a repository that you have cloned in Internal Storage:
 
-- El teléfono no debe estar en modo ahorro
-- Después de editar el archivo hay que cerrar el App antes de enviar los cambios al repositorio
-- Si usas mucho un repositorio para editar los mismos archivos en el celular y en el ordenador, mejor usa **git worktree**, como se explica más abajo para usar Obsidian en Android en Termux así nunca se corromperá un repositorio.
+- The phone should not be in battery saver mode
+- After editing the file, you must close the app before sending the changes to the repository
+- If you frequently use a repository to edit the same files on the phone and on the computer, it is better to use **git worktree**, as explained below to use Obsidian on Android in Termux so that the repository never gets corrupted.
 
-### Requerimientos
-- Teléfono con Android
-- Repositorio en github.com o gitlab.com
+### Requirements
+- Phone with Android
+- Repository on github.com or gitlab.com
 
-### Archivos usables
-Se pueden usar archivos para control de versiones como: .txt, .md, u otros.
+### Usable files
+You can use files for version control like: .txt, .md, or others.
 
-En los archivos compatibles con control de versiones solo se aumentará el tamaño del archivo donde se edite y agregue información.
+In version control compatible files, only the size of the file where you edit and add information will increase.
 
-Como dato importante LibreOffice tiene un archivo para control de versiones: .fodt
-[FODT en LibreOffice](https://facilitarelsoftwarelibre.blogspot.com/2020/06/que-es-un-archivo-fodt-fodt-flat-open.html)
-pero para este no hay un editor en la Play Store.
+As an important note, LibreOffice has a file for version control: .fodt
+[FODT in LibreOffice](https://facilitarelsoftwarelibre.blogspot.com/2020/06/que-es-un-archivo-fodt-fodt-flat-open.html)
+but there is no editor for it in the Play Store.
 
-## Qué más se puede hacer con git, instalar Obsidian para tener tus notas y conocimientos en el celular
-- Se puede usar Obsidian para editar un repositorio de github que también se pueda usar en Linux, solo que el App Obsidian con Mucha frecuencia daña el repositorio, pero la solución aquí está:
-[Sincronizar git en Android en Termux sin que se dañe el repositorio](/ES/Sincronizar-git-en-desde-Android-en-Termux.md)
-Pero para que no se corrompa el repositorio hay que usar **git worktree**, allí en este tutorial está todo explicado:
+## What else can be done with git, install Obsidian to have your notes and knowledge on the phone
+- You can use Obsidian to edit a github repository that can also be used on Linux, but the Obsidian app very frequently damages the repository, but the solution is here:
+[Synchronize git on Android in Termux without damaging the repository](/ES/Sincronizar-git-en-desde-Android-en-Termux.md)
+But to prevent the repository from being corrupted, you must use **git worktree**, everything is explained in this tutorial there:
 
-- Se puede hacer push, fetch, merge y todos los demás comandos para mantener sincronizado el repo
-- Se puede trabajar con los archivos desde:
-  - Android a Linux y viceversa
-  - Android a Windows y viceversa
-  - Android a MAC y viceversa
+- You can do push, fetch, merge and all other commands to keep the repo synchronized
+- You can work with the files from:
+  - Android to Linux and vice versa
+  - Android to Windows and vice versa
+  - Android to MAC and vice versa
 
-> Nota: Los 2 últimos no los he probado, pero sé que existen.
+> Note: I have not tested the last 2, but I know they exist.
 
-## Compatibilidad entre Android y Linux
+## Compatibility between Android and Linux
 
-En el video "Aprende GIT Ahora! Curso completo gratis desde cero" ([https://youtu.be/VdGzPZ31ts8](https://youtu.be/VdGzPZ31ts8)), Nicolás Schurmann explica que si sincronizan un repositorio desde Windows a "Linux o MAC" deben configurar el fin de línea para enviar ediciones en código de texto. Sin embargo, en este tutorial no es necesario hacerlo ya que usar git desde Termux es como usarlo en Linux.
+In the video "Aprende GIT Ahora! Complete free course from scratch" ([https://youtu.be/VdGzPZ31ts8](https://youtu.be/VdGzPZ31ts8)), Nicolás Schurmann explains that if you synchronize a repository from Windows to "Linux or MAC" you must configure the end of line for sending text code edits. However, in this tutorial it is not necessary since using git from Termux is like using it on Linux.
 
-Este tutorial no pretende enseñar a usar git. Si no sabe usarlo, puede buscar en Google las palabras "aprende git cursos" y encontrará recursos en Udemy, Platzi, devcode, ed.team, Coursera, o [https://github.com/JJ/aprende-git](https://github.com/JJ/aprende-git), Youtube, etc.
+This tutorial does not intend to teach how to use git. If you don't know how to use it, you can search on Google for the words "aprende git cursos" and you will find resources on Udemy, Platzi, devcode, ed.team, Coursera, or [https://github.com/JJ/aprende-git](https://github.com/JJ/aprende-git), YouTube, etc.
 
-# Instalando Termux en Android
+# Installing Termux on Android
 
-A continuación elija la opción que necesite:
-## Instalando Termux y git en Android 7, 8, 9, 10, 11, 12, 13, 14+
+Next, choose the option you need:
+## Installing Termux and git on Android 7, 8, 9, 10, 11, 12, 13, 14+
 
-Le dejo opciones, como se me perdió mi Xiaomi y me compré un SAMSUNG GALAXY A15 ahora uso la 3er opción:
+I leave you options, as I lost my Xiaomi and bought a SAMSUNG GALAXY A15 now I use the 3rd option:
 
-### 1ra Opción: Instalación con Google Play Store
+### 1st Option: Installation with Google Play Store
 
-En la Play Store hay una versión de Termux actualizada que dice allí en la información del App en la misma Google Play a la fecha 2024 en la que se puede instalar Termux y allí git, la cuál la probé pero no se puede instalar yt-dlp pues no existe ese paquete, y puede que no se puedan instalar más cosas, pero si solo van a instalar git bien lo pueden usar, también si no desean instalar Apps de otros sitios estará bien para ustedes (a mi me parece que es una versión con paquetes limitados de Termux).
+In the Play Store there is an updated version of Termux that says there in the app information in the same Google Play as of 2024 in which you can install Termux and git there, which I tested but you cannot install yt-dlp because that package does not exist, and maybe you cannot install more things, but if you are only going to install git you can use it well, also if you do not want to install apps from other sites it will be fine for you (to me it seems like a version with limited packages of Termux).
 
-También lea:
+Also read:
 
 [https://github.com/termux/termux-app](https://github.com/termux/termux-app)
 
-### 2da Opción: Instalación con Xiaomi
+### 2nd Option: Installation with Xiaomi
 
-Si Usted tiene un celular Xiaomi, busque en la tienda de aplicaciones:
+If you have a Xiaomi phone, search in the application store:
 
 - Mi Picks
-- o GetApps
+- or GetApps
 
-Busque "Termux", instálelo. Ellos tienen a la fecha que se me perdió mi Xiaomi 2024 la versión Termux 0.119, instalelo y ábralo.
+Search "Termux", install it. They have as of when I lost my Xiaomi 2024 the version Termux 0.119, install it and open it.
 
-**Actualizar y automáticamente buscar un repositorio y actualizar**
+**Update and automatically search for a repository and update**
 
-Si solo va a usar git en Termux, se le facilita todo. Solo ponga:
+If you are only going to use git in Termux, everything is made easy for you. Just put:
 
 ```
 pkg update
 ```
 
->Nota: En la versión 0.119 de ellos no es necesario usar `pkg ugrade` porque `pkg update` es una especie de híbrido que hace las dos cosas
+>Note: In their version 0.119 it is not necessary to use `pkg upgrade` because `pkg update` is a kind of hybrid that does both things
 
-Aparecerá un mensaje que dice: "Testing the available mirrors:"
+A message will appear that says: "Testing the available mirrors:"
 
-También aparecerá un mensaje:
+Also a message will appear:
 
 ```
 Calculating upgrade... Done
 The following NEW packages will be installed:
 ```
 
-Le preguntará:
+It will ask you:
 
 ```
 Do you want to continue? [Y/n]
 ```
 
-Responda:
+Answer:
 
 ```
 y
 ```
 
-y presione ENTER. Esté atento porque luego le volverá a preguntar, hay que poner como 5 veces: y
+and press ENTER. Be attentive because it will ask you again later, you have to put y about 5 times
 
-Ahora instale git con:
+Now install git with:
 
 ```
 pkg install git
 ```
 
-Además les
+Additionally,
 
-Para que Termux tenga acceso a su almacenamiento interno, escriba:
+For Termux to have access to its internal storage, write:
 
 ```
 termux-setup-storage
 ```
 
-y presione Enter y acepte. Así lo he usado en un Redmi Xiaomi Note 11 que trae Termux 0.119 (versión que solo ellos tienen a esta hecha que hago el tutorial 2024). 
+and press Enter and accept. I have used it this way on a Redmi Xiaomi Note 11 that comes with Termux 0.119 (version that only they have up to this date when I make the tutorial 2024).
 
-Aparte, si Ud quisiera elegir un repositorio de los disponibles, más abajo indico cómo.
+Apart from that, if you wanted to choose one of the available repositories, below I indicate how.
 
-### 3ra Opción: F-Droid
+### 3rd Option: F-Droid
 
-Entre en:
+Go to:
 
 [https://f-droid.org/](https://f-droid.org/).
 
-F-Droid es un repositorio de aplicaciones de software libre para dispositivos Android. Funciona como una alternativa a Google Play Store, proporcionando aplicaciones que son de código abierto y, en muchos casos, centradas en la privacidad.
+F-Droid is a repository of free software applications for Android devices. It works as an alternative to Google Play Store, providing open-source applications and, in many cases, privacy-focused.
 
-Descargue e instale F-Droid
+Download and install F-Droid
 
-Y para que ustedes tengan tranquilidad, carguen el Apk descargada a:
+And for you to have peace of mind, upload the downloaded Apk to:
 
 virustotal.com
 
-está limpia, instalar 
+it's clean, install
 
-luego abra F-Droid y en la lupa verde que está abajo a la izquierda busque: "Termux Emulador de terminal con paquetes" e instálelo.
+then open F-Droid and in the green magnifying glass that is at the bottom left search: "Termux Terminal emulator with packages" and install it.
 
-En esta versión si he usado `pkg update` y `pkg upgrade` porque no es un híbrido.
+In this version I have used `pkg update` and `pkg upgrade` because it is not a hybrid.
 
-### 4ta Opción: Paquete apk desde F-Droid
+### 4th Option: APK package from F-Droid
 
-Puede descargar si deseas sólo el APK de Termux desde:
+You can download if you want only the Termux APK from:
 
 [https://f-droid.org/en/packages/com.termux/](https://f-droid.org/en/packages/com.termux/)
 
-
-Y para que ustedes tengan tranquilidad, carguen el Apk descargada a:
+And for you to have peace of mind, upload the downloaded Apk to:
 
 virustotal.com
 
-está limpia
+it's clean
 
-e instalarla
+and install it
 
-## Zoom en Termux
+## Zoom in Termux
 
-Si la letra de Termux es muy pequeña, hágalo más grande usando los dos dedos haciendo zoom hacia afuera, y luego corrige había dentro.
+If the Termux font is very small, make it bigger using two fingers to zoom out, and then correct what was inside.
 
-## Para instalar Termux en Android 5, 6
+## To install Termux on Android 5, 6
 
-Vea las instrucciones en el siguiente enlace:
+See the instructions in the following link:
 [https://youtu.be/eKhjvaLIPnI](https://youtu.be/eKhjvaLIPnI)
 
-Aunque podría ya no servir para nadie, pero lo dejo como consulta.
+Although it might not work for anyone anymore, but I leave it as a reference.
 
-## Desactivar el proceso fantasma en Android para que funcione correctamente Termux  
-Si algun celular con Android tiene habilitado el proceso fantastama, cerrará algún proceso que se esté ejecutando de fondo, esto puede ser negativo si el usuario a instalado algún Linux en Termux, o alguna aplicación que necesite estar funcionando de fondo; para desabilitar eso primero hay que habilitar las opciones para desarrollador:
+## Disable the phantom process in Android for Termux to work correctly
+If some phone with Android has the phantom process enabled, it will close some process that is running in the background, this can be negative if the user has installed some Linux in Termux, or some application that needs to be running in the background; to disable that first you have to enable the developer options:
 
-**Cómo habilitar las Opciones para desarrolladores**  
+**How to enable Developer Options**
 [https://developer.android.com/studio/debug/dev-options?hl=es-419](https://developer.android.com/studio/debug/dev-options?hl=es-419)
 
-y dejo un video pero está en inglés sobre cómo desabilitar el proceso fantasma:
+and I leave a video but it's in English about how to disable the phantom process:
 
-**Fix Termux Error [Process completed (signal 9) - Disable Phantom Process Killer In Android 12 & 13**  
+**Fix Termux Error [Process completed (signal 9) - Disable Phantom Process Killer In Android 12 & 13**
 [https://youtu.be/w10I_3-Qaqw?si=VxFhe7d68SVst3QB](https://youtu.be/w10I_3-Qaqw?si=VxFhe7d68SVst3QB)
 
-Y las siguientes son consultas en español:
+And the following are queries in Spanish:
 
-**Android 13 quiere que exprimas al máximo la potencia de tu teléfono. ¿Cómo lo hará?**  
+**Android 13 wants you to squeeze the maximum power from your phone. How will it do it?**
 [https://cincodias.elpais.com/smartlife/2021/12/14/lifestyle/1639489577_351730.html](https://cincodias.elpais.com/smartlife/2021/12/14/lifestyle/1639489577_351730.html)
 
-**Android 13 permitirá deshabilitar la estricta gestión de procesos fantasmas de Android 12**  
+**Android 13 will allow disabling the strict phantom process management of Android 12**
 [https://www.xatakandroid.com/sistema-operativo/android-13-permitira-deshabilitar-estricta-gestion-procesos-fantasmas-android-12](https://www.xatakandroid.com/sistema-operativo/android-13-permitira-deshabilitar-estricta-gestion-procesos-fantasmas-android-12)
 
-según eso la monitorización de los procesos fantasma puede ser desactivada desde las opciones de Configuración > Opciones de desarrollador > Banderas de características.
+according to that the phantom process monitoring can be disabled from the Settings > Developer Options > Feature Flags.
 
-## Eligiendo un repositorio
+## Choosing a repository
 
-Cuando he instalado Termux desde F-Droid lo siguiente es lo que hago porque quiero que los paquetes que se descarguen siempre sean exactamente los mismos y que no estén unos más actualizados o contengan pequeñas diferencias que otros paquetes, para evitar algún mal funcionamiento, ejemplo, cuando son muchas las dependencias a usar como en programas escritos en python que son bastantes delicados con sus bibliotecas y a veces por un cambio en versiones ya no funcionan. Esto es, personalmente, lo que yo pienso: Usar si está disponible siempre un repositorio, o si se llegara a caer, usar algún otro, pero siempre sabiendo cuál es y que sea de los que nunca o de los que menos se caen.
+When I have installed Termux from F-Droid the next thing I do is because I want the packages that are downloaded to always be exactly the same and not some more updated or contain small differences from other packages, to avoid some malfunction, example, when there are many dependencies to use as in programs written in python that are quite delicate with their libraries and sometimes due to a change in versions they no longer work. This is, personally, what I think: Use if available always a repository, or if it were to fall, use some other, but always knowing which one it is and that it is one of those that never or least fall.
 
-**Tutorial probado en:**  
+**Tutorial tested on:**
 
-- **Termux 0.119.0 en Xiaomi Redmi Note 11**
-- **Termux 0.119.0 desde [https://f-droid.org/en/packages/com.termux/](https://f-droid.org/en/packages/com.termux/) en SAMSUNG GALAXY A15, pero se descarga como com.termux_1022.apk**
+- **Termux 0.119.0 on Xiaomi Redmi Note 11**
+- **Termux 0.119.0 from [https://f-droid.org/en/packages/com.termux/](https://f-droid.org/en/packages/com.termux/) on SAMSUNG GALAXY A15, but it downloads as com.termux_1022.apk**
 
-**Nota:** Este tutorial lo reviso en 2026 enero
+**Note:** This tutorial I review in 2026 January
 
 ### termux-change-repo
 
-Para elegir un repositorio, poner:
+To choose a repository, put:
 
 ```bash
 termux-change-repo
 ```
 
-Las siguientes indicaciones las he visto así a la hecha 2024, pero con nuevas versiones que salgan en el futuro puede que varíen, pero el principio es el mismo, siempre lean (está en inglés) las instrucciones con atención, y son dos, la una es que el programa elija entre todos los repositorios uno disponible, y la otra es que ustedes elijan uno (que es lo que yo hago).
+The following indications I have seen like this as of 2024, but with new versions that come out in the future may vary, but the principle is the same, always read (it's in English) the instructions carefully, and there are two, one is that the program chooses between all the repositories one available, and the other is that you choose one (which is what I do).
 
-Cuando es la primera vez que uno usa este comando en Termux 0.119, aparece así:
+When it is the first time that one uses this command in Termux 0.119, it appears like this:
 
 ```
 Which repositories do you want to edit? Select with space.
@@ -251,11 +247,11 @@ Which repositories do you want to edit? Select with space.
 │  <  OK  >    <Cancel> │
 ```
 
-**Nota:** Puede seleccionar con las flechas más barra espaciadora
+**Note:** You can select with arrows plus spacebar
 
-O con clic y darle Ok
+Or with click and give Ok
 
-Pero si te sale así:
+But if it comes out like this:
 
 ```
 ┌────────────────termux-change-repo──────────────────┐
@@ -271,13 +267,13 @@ Pero si te sale así:
 ├────────────────────────────────────────────────────┤  │             <  OK  >       <Cancel>
 ```
 
-Elije en de abajo: 
+Choose from below:
 
 ```
 (* ) Single mirroChoose a single mirror
 ```
 
-Y cuando te salsa así: 
+And when it comes out like this:
 
 ```
 ┌──────────termux-change-repo────────────┐
@@ -297,17 +293,17 @@ Y cuando te salsa así:
 │         <  OK  >     <Cancel>
 ```
 
-Yo aplasté Enter en la primera opción: 
+I pressed Enter on the first option:
 
 (*) All mirrors All in the entire world
 
-Que significa: 
+Which means:
 
-(*) Todos los espejos Todo en el mundo entero
+(*) All mirrors All in the entire world
 
-Pero se podía elegir alguna en especial si uno quiere un mirror de alguna de esas zonas y se ahorraría tiempo en estar buscando
+But you could choose some special if one wants a mirror from some of those zones and would save time in searching
 
-Si es la segunda vez (estas opciones pueden variar de una versión a otra de Termux) que hacen este proceso puede que les aparezca así: 
+If it is the second time (these options may vary from one Termux version to another) that you do this process it may appear like this:
 
 ```
 Do you want to choose a mirror group  
@@ -317,64 +313,63 @@ Do you want to choose a mirror group
 │         <  OK  >     <Cancel>
 ```
 
-en este caso haga clic en la segunda opción para que esa que marcada (lo mismo que antes descrito): 
+in this case click on the second option so that that one marked (same as before described):
 
 (*) Single miChoose a single mirror
 
-cuya traducción es: 
+whose translation is:
 
-(*) Escoja un solo espejo
+(*) Choose a single mirror
 
-y de clic en ok
+and click on ok
 
-Aparecerá una lista, para moverse hacia abajo o arriba puedan usar en termux las flechas o Página arriba (PGUP) o Página abajo (PGDN)
+A list will appear, to move down or up you can use in termux the arrows or Page Up (PGUP) or Page Down (PGDN)
 
-## Repositorios Disponibles (no los he visto caídos)
+## Available Repositories (I have not seen them down)
 
-En la versión de Termux k está en el instalador de los celulares Xiaomi "Mi Picks" he visto k se cargan bastante los siguientes repos:
+In the version of Termux that is in the installer of Xiaomi phones "Mi Picks" I have seen that the following repos load quite a bit:
 
 ### Grimler
 (Henrik Grimler https://github.com/grimler91)
-Alojado en Helsinki, Finlandia.
-Bifurcado desde el nodo principal
-Actualizado cada hora
+Hosted in Helsinki, Finland.
+Forked from the main node
+Updated every hour
 https://grimler.se/termux-packages-24
 
-### BFSU 
+### BFSU
 (Beijing Foreign Studies University)(http://www.bfsu.edu.cn/)(China)
 https://mirrors.bfsu.edu.cn/termux/apt/termux-main
 
 ### Karibu
 (karibu@freedif.com)
-Alojado en Singapore (Asia) 
-Actualizado cada hora
+Hosted in Singapore (Asia)
+Updated every hour
 https://mirror.freedif.org/termux/termux-main
 
 ### mwt
 (Matthew W. Thomas | Economist at FTC | Northwestern University Economics PhD https://github.com/mwt)
-Alojado en la costa este/oeste de EE. UU. y Europa (a través de CDN)
-Actualizado 4 veces al día
+Hosted on the east/west coast of US and Europe (via CDN)
+Updated 4 times a day
 https://mirror.mwt.me/termux/main
 
 ### Purde
-Grupo de usuarios de Linux de la Universidad de Purdue
-Alojado en Indiana, EE. UU.
-Actualizado 4 veces al día https://plug-mirror.rcac.purdue.edu/termux/termux-main
+Purdue University Linux Users Group
+Hosted in Indiana, USA.
+Updated 4 times a day https://plug-mirror.rcac.purdue.edu/termux/termux-main
 
 ### a1batross
 (https://github.com/a1batross)
-Actualizado 4 veces al día https://termux.mentality.rip/termux-main
+Updated 4 times a day https://termux.mentality.rip/termux-main
 
 ### Librehat
 (https://github.com/librehat)
-Actualizado 4 veces al día https://termux.librehat.com/apt/termux-main
+Updated 4 times a day https://termux.librehat.com/apt/termux-main
 
 ### CloudFlare
 CDN endpoint https://packages-cf.termux.org/apt/termux-main
 
-
-## Repositorios caídos con frecuencia
-Y he visto caídos a:
+## Repositories that fall frequently
+And I have seen fallen to:
 
 ### sahilister
 https://termux.sahilister.in/apt/termux-main: bad
@@ -385,238 +380,236 @@ https://dl.kcubeterm.com/termux-main: bad
 ### Astra
 https://termux.astra.in.ua/apt/termux-main: bad
 
-**CONSEJO**  
-Yo uso Grimler, nunca lo he visto caído, tampoco a BFSU (solo es de observar, los que se caen tienen: bad)
+**ADVICE**
+I use Grimler, I have never seen it down, neither BFSU (just to observe, those that fall have: bad)
 
-La description de los repos las he visto en: 
+The description of the repos I have seen in:
 
 [Termux Packages Mirrors](https://github.com/termux/termux-packages/wiki/Mirrors)
 
-Para elegir uno, con la flecha hacia abajo diríjase hasta:
+To choose one, with the down arrow go to:
 
 ```
-( ) Mirrors by Grimler . . . 
+( ) Mirrors by Grimler . . .
 ```
 
-o:
+or:
 
 ```
-( ) Mirrors by BFSU . . . 
+( ) Mirrors by BFSU . . .
 ```
 
-O también puede elegir otro.
+Or you can also choose another.
 
-Ejemplo, voy a seleccionar Grimler, asi que con la flecha abajo me pongo allí y doy barra espaciadora en el teclado para marcarlo, k kede así: 
+Example, I am going to select Grimler, so with the down arrow I put there and give spacebar on the keyboard to mark it, so that it stays like this:
 
 ```
 ( * ) Mirrors by Grimler . . .
 ```
 
-y Enter
+and Enter
 
-Esperar a que termine, y poner: 
+Wait for it to finish, and put:
 
 ```
 pkg update
 ```
 
-so le have unas preguntas, ponga: 
+so you have some questions, put:
 
 ```
 y
 ```
 
-Además explico que en la versión de Termux 0.118 después de usar pkg update hay que usar: 
+In addition I explain that in the Termux version 0.118 after using pkg update you have to use:
 
 ```
 pkg upgrade
 ```
 
-(pero como les explicaba más arriba, en la versión 0,119 de Xiaomi no es necesario porque pkg update es una especie de híbrido que hace las dos cosas) 
+(but as I explained above, in the Xiaomi version 0,119 it is not necessary because pkg update is a kind of hybrid that does both things)
 
-esté atento y ponga la: "y" varias veces.
+be attentive and put the: "y" several times.
 
-## Aparecerán más opciones en termux-change-repo después de actualizar
+## More options will appear in termux-change-repo after updating
 
-Si Ud x algún motivo desea usar otra vez el comando: 
+If you for some reason want to use the command again:
 
 ```
 termux-change-repo
 ```
 
-Le aparecerán más opciones.
+More options will appear.
 
-si hacen como yo elijan la opción que es para escoger manualmente uno, y luego:
+if you do like me choose the option that is to manually choose one, and then:
 
 ```
 pkg update
 ```
-además, este comando le aconsejo usarlo con alguna frecuencia, puede ser cada mes, es para tener actualizados los parquetes (en Termux 0.119 solo con este basta, y con 0.118 luego hay que usar pkg upgrade)
 
-## Instalando git
+in addition, this command I advise using it with some frequency, it can be every month, it is to have the packages updated (in Termux 0.119 only with this is enough, and with 0.118 then you have to use pkg upgrade)
+
+## Installing git
 
 ```
 pkg install git
 ```
 
-cuando ponga este comando vea allí cuál repo aparece, en caso de que se haya cambiado el repo cancele con "Ctrl + C" y cambielo usando otra vez `termux-change-repo` xq sino empezará a buscar aleatoriamente otro repo
+when you put this command see there which repo appears, in case the repo has changed cancel with "Ctrl + C" and change it using again `termux-change-repo` because otherwise it will start searching randomly another repo
 
-
-Para ver la versión que tiene instalada de git ponga en Termux:
+To see the version you have installed of git put in Termux:
 
 ```
 git --version
 ```
 
-## Acceder al Almacenamiento Interno
+## Access Internal Storage
 
-Para que Termux tenga acceso a su almacenamiento interno, escriba:
+For Termux to have access to its internal storage, write:
 
 ```
 termux-setup-storage
 ```
 
-y presione Enter y acepte.
+and press Enter and accept.
 
-Para clonar un repositorio en la memoria interna primero hay que llegar allí. En Termux escriba:
+To clone a repository in internal memory first you have to get there. In Termux write:
 
 ```
 cd storage
 ```
 
-Luego escriba:
+Then write:
 
 ```
 ls
 ```
 
-para ver los repositorios disponibles.
+to see the available repositories.
 
-Luego elija la memoria compartida:
+Then choose the shared memory:
 
 ```
 cd shared
 ```
 
-Comando especial: También se pueden abreviar los pasos 1 y 2 solo con:
+Special command: You can also abbreviate steps 1 and 2 only with:
 
 ```bash
 cd /sdcard
 ```
 
-Con cualquiera de los dos métodos llegará a la memoria interna compartida.
+With either of the two methods you will reach the shared internal memory.
 
-Para saber en qué ruta está ubicado, escriba en Termux:
+To know in which path you are located, write in Termux:
 
 ```bash
 pwd
 ```
 
-y presione Enter.
+and press Enter.
 
-Nota: Si es la primera vez que abre Termux estará en la carpeta de configuraciones de Termux (es una especie de emulación del HOME de Linux para que Termux tenga allí sus archivos como si estuviera en Linux):
+Note: If it is the first time you open Termux you will be in the Termux configuration folder (it is a kind of emulation of the Linux HOME so that Termux has its files there as if it were in Linux):
 
 ```
 /data/data/com.termux/files/home
 ```
 
-y si ya está en la memoria interna y para llegar allí usó cd shared aparece así:
+and if you are already in internal memory and to get there you used cd shared it appears like this:
 
 ```
 ~/storage/shared $
 ```
-y si uso: cd /sdcard así:
+
+and if I use: cd /sdcard like this:
+
 ```
 /sdcard $
 ```
 
->**Nota**: Siempre es importante saber dónde está ubicado porque puede ser que sin querer clonó un repositorio dentro del espacio de configuraciones de Termux o en storage, y en caso de pasar algún día eso, puede usar el comando mover "mv" para mover la carpeta que haya clonado desde el espacio de las configuraciones de Termux a storage y luego usar otra vez "mv" para mover la carpeta a "shared". Para esto es necesario saber que si estoy en "/data/data/com.termux/files/home" (que es por defecto donde uno está ubicado cuando recién abre Termux) fuera de este está "storage", y si estoy en "storage" fuera de este está "shared", entonces si cloné un repo llamado "mirepo" estando en ".../home" primero debo pasarlo a "storage" poniendo allí: `mv su-repo storage` y luego para pasarlo al Almacenamiento Interno poner: `mv su-repo shared` y listo solucionado; y si solo por error lo clonó en storage solo ponga: `mv su-repo shared`. Por cierto, si usted está en "shared" y desea ir a ".../home" ponga `cd`.
+>**Note**: It is always important to know where you are located because it may be that without wanting you cloned a repository inside the Termux configuration space or in storage, and in case of passing some day that, you can use the move command "mv" to move the folder that you have cloned from the configuration space of Termux to storage and then use "mv" again to move the folder to "shared". For this it is necessary to know that if I am in "/data/data/com.termux/files/home" (which is by default where you are located when you just open Termux) outside of this is "storage", and if I am in "storage" outside of this is "shared", then if I cloned a repo called "mirepo" being in ".../home" first I must pass it to "storage" putting there: `mv su-repo storage` and then to pass it to Internal Storage put: `mv su-repo shared` and ready solved; and if only by mistake you cloned it in storage just put: `mv su-repo shared`. By the way, if you are in "shared" and want to go to ".../home" put `cd`.
 
+## Create and use a token as password in github.com
 
+(If you already have the token omit this step)
 
-## Crear y usar un token como contraseña en github.com
-
-(Si ya tiene el token omita este paso)
-
-Para poder explicar mejor usaré la siguiente cuenta:
+To be able to explain better I will use the following account:
 [https://github.com/mamimeli](https://github.com/mamimeli)
 
-Entre en la siguiente dirección:
+Enter the following address:
 [https://github.com/settings/](https://github.com/settings/)
 
-Allí haga clic en:
+There click on:
 
 1. Developer Settings
 2. Personal Access Token
 3. Tokens (classic)
 4. Generate New Token (Classic)
 
-O también directamente en la dirección:
+Or also directly in the address:
 [https://github.com/settings/tokens](https://github.com/settings/tokens)
 
-Allí en "**Note**" póngale algún nombre.
+There in "**Note**" put some name.
 
-En "**Expiration**" seleccione un tiempo de expiración (Github aconseja poner un tiempo de expiración: [https://bit.ly/3BrIvA9](https://bit.ly/3BrIvA9))
+In "**Expiration**" select an expiration time (Github advises to put an expiration time: [https://bit.ly/3BrIvA9](https://bit.ly/3BrIvA9))
 
-En "**Select scopes**" marque "**repo**" (pero si necesita algún otro permiso márquelo) y al final de la página haga clic en "**Generate token**".
+In "**Select scopes**" mark "**repo**" (but if you need some other permission mark it) and at the end of the page click on "**Generate token**".
 
-Copie inmediatamente el código generado y téngalo en un lugar seguro o en un gestor de contraseñas.
+Copy immediately the generated code and have it in a safe place or in a password manager.
 
+## Clone a repository
 
-## Clonar un repositorio
-
-Una vez que esté en el Almacenamiento Interno Compartido (llamado shared o /sdcard -si utilizo el segundo método para llegar allí-) clone un Repositorio, por ejemplo:
+Once you are in the Shared Internal Storage (called shared or /sdcard -if you use the second method to get there-) clone a Repository, for example:
 
 ```bash
 git clone https://github.com/mamimeli/Cancion
 ```
 
-## Evitar problemas con caracteres tipográficos al clonar un repositorio 
-Cuando clones un repositorio este no tiene que tener en los nombres de archivos o carpetas los siguientes caracteres no permitidos en Android no Linux pues tienen ciertas restricciones :
+## Avoid problems with typographical characters when cloning a repository
+When you clone a repository it must not have in the names of files or folders the following forbidden characters in Android not Linux since they have certain restrictions:
 
-1. **Dos puntos `:`**
-2. **Asterisco `*`**
-3. **Signo de interrogación `?`**
-4. **Comillas `"`**
-5. **Menor que `<` y mayor que `>`**
-6. **Barra vertical `|`**
-7. **Barra invertida `\`**
-8. **Barra diagonal `/`**
+1. **Colon `:`**
+2. **Asterisk `*`**
+3. **Question mark `?`**
+4. **Quotes `"`**
+5. **Less than `<` and greater than `>`**
+6. **Vertical bar `|`**
+7. **Backslash `\`**
+8. **Forward slash `/`**
 
-Además, evita nombres que terminen en un espacio o punto, ya que también pueden causar problemas en algunos sistemas de archivos compatibles con Android. Y si alguna vez comentes el error de hacer fetch o pull de un repositorio con esos caracteres, revisa más abajo la sección de resolver conflictos al hacer merge.
+In addition, avoid names that end in a space or period, as they can also cause problems in some Android compatible file systems. And if you ever commit the error of doing fetch or pull of a repository with those characters, check below the section of resolving conflicts when doing merge.
 
-### Recomendación
-Para evitar estos errores, utiliza caracteres comunes como letras, números, guiones `-`, y guiones bajos `_`, que son compatibles tanto en Android como en otros sistemas de archivos.
+### Recommendation
+To avoid these errors, use common characters like letters, numbers, hyphens `-`, and underscores `_`, which are compatible both in Android and in other file systems.
 
+## Identify in git (and that it does not ask for the token again)
 
-## Identificarse en git (y que no pida otra vez el token)
-
-Escriba en Termux (reemplace con sus datos):
+Write in Termux (replace with your data):
 
 ```bash
-git config --global user.name suusuario
-git config --global user.email sucorreo@servicio.com
+git config --global user.name youruser
+git config --global user.email youremail@service.com
 ```
 
-Y el siguiente comando es para que git almacene el Token:
+And the next command is for git to store the Token:
 
 ```bash
 git config --global credential.helper store
 ```
 
-Y entre en el repositorio con cd, en mi caso así:
+And enter the repository with cd, in my case like this:
 
 ```bash
 cd Cancion
 ```
 
-Ahora haga:
+Now do:
 
 ```bash
 git status
 ```
 
-y aparecerá el siguiente mensaje:
+and the following message will appear:
 
 ```
 /sdcard/Cancionero $ git status
@@ -625,258 +618,258 @@ To add an exception for this directory, call:
         git config --global --add safe.directory /storage/emulated/0/Cancion
 ```
 
-Allí dice que ha detectado un dueño dudoso y que añada una excepción a ese directorio para aceptarlo como seguro. En mi caso (usted debe poner lo que le aparezca) lo que tengo que poner es eso que me dice allí mismo:
+There it says that it has detected a dubious owner and that add an exception to that directory to accept it as safe. In my case (you must put what appears to you) what I have to put is that which it tells me there same:
 
 ```bash
 git config --global --add safe.directory /storage/emulated/0/Cancion
 ```
 
-Solucionado (eso deberá hacerlo en cada Repositorio)
+Solved (you will have to do this in each Repository)
 
-## Edite algún archivo o carpeta 
+## Edit some file or folder
 
-Ahora edite algún archivo o carpeta desde algún Administrador de archivos de Android que permita (Nota: El administrador de Xiaomi y el de Samsung no funcionan para esto) ver no solo las carpetas del sistema sino los repositorios que uno clone, esto, para agregar un cambio en el repositorio, ejemplo con (algunos de los administradores de archivos tienen un editor de texto incorporado): 
+Now edit some file or folder from some Android File Manager that allows (Note: The Xiaomi manager and the Samsung one do not work for this) to see not only the system folders but the repositories that you clone, this, to add a change in the repository, example with (some of the file managers have a built-in text editor):
 
-- Gestor de archivos | File Manager Plus (gratis)
-- Super Explorador de archivos | ESTRONGS LIMITED (gratis con publicidad)
-- Solid Explorer File Manager| NetBeans (prueba gratis por algunos días)
-- MiXplorer Silver | Hootan Parsa (de pago)
-- MiXplorer (gratis)
-- Editor de textos QuickEdit (gratis con publicidad)
-- CodeFusion: Code Editor (gratis)
-- WPS Office (gratis, de pago exporta a PDF)
-- Microsoft 365 (Office) + OneDrive (gratis, exporta a PDF con internet)
-- Microsoft Word + OneDrive (gratis, exporta a PDF con internet)
-- Documentos de Google + Google Drive (gratis, exporta a PDF con internet)
-- AndrOpen Office (gratis, de pago exporta a PDF)
-- nano o Vim para editar archivos de texto desde la línea de comandos
+- File Manager | File Manager Plus (free)
+- Super File Explorer | ESTRONGS LIMITED (free with ads)
+- Solid Explorer File Manager| NetBeans (free trial for some days)
+- MiXplorer Silver | Hootan Parsa (paid)
+- MiXplorer (free)
+- QuickEdit Text Editor (free with ads)
+- CodeFusion: Code Editor (free)
+- WPS Office (free, paid exports to PDF)
+- Microsoft 365 (Office) + OneDrive (free, exports to PDF with internet)
+- Microsoft Word + OneDrive (free, exports to PDF with internet)
+- Google Docs + Google Drive (free, exports to PDF with internet)
+- AndrOpen Office (free, paid exports to PDF)
+- nano or Vim to edit text files from the command line
 
-vea todas las explicaciones de cómo usarlos en este apartado:
+see all the explanations of how to use them in this section:
 
-[Editar archivos de repositorios git en Android desde editores o administradores de archivos Apps](/ES/Editar-desde-editor-o-administrador-de-archivos.md)
+[Edit repository files git on Android from editors or file manager Apps](/ES/Editar-desde-editor-o-administrador-de-archivos.md)
 
-ahora agregelo y súba el cambio a GitHub con ejemplo con las siguientes indicaciones:
+now add it and upload the change to GitHub with example with the following indications:
 
-### Añadiendo el cambio con git add .
+### Adding the change with git add .
 
-Sea como sea que haya hecho el cambio a algún archivo de su repositorio, añada el cambio que ha hecho en git ejemplo con:
+No matter how you have made the change to some file of your repository, add the change you have made in git example with:
 
 ```bash
 git add .
 ```
 
-y debemos hacer un commit, ejemplo:
+and we must make a commit, example:
 
 ```bash
-git commit -m "Nombre del commit"
+git commit -m "Commit name"
 ```
 
-Y luego envíe los cambios al remoto:
+And then send the changes to the remote:
 
 ```bash
 git push
 ```
 
-y cuando le pregunte por su Usuario póngalo, y cuando le pregunte por el Password ponga su **Token** (si hizo bien siguiendo la secuencia la proxima vez no le pedirá el token).
+and when it asks you for your User put it, and when it asks you for the Password put your **Token** (if you did well following the sequence the next time it will not ask for the token).
 
-Se creará el archivo (eso es interno, no lo verá usted):
+The file will be created (this is internal, you will not see it):
 
 .git-credentials
 
-se creará dentro del HOME que Termux emula, el archivo que contendrá el Token.
+it will be created within the HOME that Termux emulates, the file that will contain the Token.
 
-> **Nota:** Si luego desean usar otro usuario de github o gitlab deben ingresarlo y se cambiará, y si desean regresar al anterior deben ingresarlo otra vez, es decir, siempre estará activo el último usuario ingresado.
+> **Note:** If you then want to use another github or gitlab user you must enter it and it will change, and if you want to return to the previous one you must enter it again, that is, the last entered user will always be active.
 
-Y con eso ya podemos hacer:
+And with that we can already do:
 
-git status  
-push  
-fetch  
-merge  
-pull, etc  
+git status
+push
+fetch
+merge
+pull, etc
 
-# Usando editores de texto para terminal como Nano o Vim
-Usando Termux llegará el momento que tenga que usar algún editor de texto de línea de comandos como "Nano" que me vino instalado en el Termux de "Mi Picks" de Xiaomi, pero si no está instalado, instálelo así:
+# Using terminal text editors like Nano or Vim
+Using Termux will come the time that you have to use some command line text editor like "Nano" that came installed in the Xiaomi "Mi Picks" Termux, but if it is not installed, install it like this:
 
 ```bash
 pkg install nano
 ```
 
-o si usa Vim (no confundir con vi que es una versión que puede estar instalada pero es limitada, Vim es la versión completa)
+or if you use Vim (do not confuse with vi which is a version that may be installed but is limited, Vim is the complete version)
 
 ```
 pkg install vim
 ```
 
-Para ver la versión de nano escriba:
+To see the nano version write:
 
 ```bash
 nano --version
 ```
 
-o para Vim
+or for Vim
 
 ```
 vim --version
 ```
 
-## Cómo poner por defecto a nano u otro editor de terminal
-Si por un caso instalan otro editor de texto de terminal y luego nano u otro que usen ya no es el editor por defecto, vuelvanlo a poner poniendo:
+## How to set nano or another terminal editor as default
+If by chance you install another terminal text editor and then nano or another that you use is no longer the default editor, make it default again by putting:
 
 ```
 update-alternatives --config editor
 ```
 
-allí aparecerá la lista de los editores instalados para uno poder elegir el que estará por defecto, dependiendo de los que estén instalados, ejem si son tres se mostrará:
+there the list of installed editors will appear for one to be able to choose which one will be default, depending on which ones are installed, e.g. if they are three it will show:
 
-0  
+0
 
-1  
+1
 
-2  
+2
 
-y debe escribir el número que corresponda y de Enter.
+and you must write the corresponding number and Enter.
 
-## Editar texto con Nano
+## Edit text with Nano
 
-Para editar, por ejemplo, el archivo de configuración de las credenciales de git, escriba:
+To edit, for example, the git credentials configuration file, write:
 
 ```bash
 nano ~/.git-credentials
 ```
 
-Para editar texto es muy sencillo, solo tiene que ubicarse en la posición adecuada con las flechas de Termux y comenzar a escribir (o pegar) texto.
+To edit text it is very simple, you just have to position yourself in the appropriate position with the Termux arrows and start writing (or pasting) text.
 
-Para guardar cambios: Nano abrevia CTRL con ^, así CTRL + O es igual a:
+To save changes: Nano abbreviates CTRL with ^, so CTRL + O is equal to:
 
 ^O
 
-y en nano aparece así:
+and in nano it appears like this:
 
-^O Guardar
+^O Save
 
-Así, para guardar presione:
+So, to save press:
 
 CTRL + O
 
-y aparecerá un mensaje que dice algo así:
+and a message will appear that says something like:
 
 ```
-Nombre del fichero a escribir: nombre-del-archivo.txt
+File name to write: file-name.txt
 ```
 
-y presione ENTER.
+and press ENTER.
 
-> Nota: Es importante hacer notar que es la letra O, no es cero.
+> Note: It is important to note that it is the letter O, not zero.
 
-### Cómo salir de Nano: 
+### How to exit Nano:
 
-Presione CTRL + X para salir, pues Nano abrevia CTRL con ^, así CTRL + X es igual a: ^X que es para Salir.
-(Nota: Si usted está escribiendo algo y ha presionado CTRL + O la opción CTRL + X no estará disponible hasta que usted presione ENTER) y saldrá de nano.
+Press CTRL + X to exit, since Nano abbreviates CTRL with ^, so CTRL + X is equal to: ^X which is to Exit.
+(Note: If you are writing something and have pressed CTRL + O the CTRL + X option will not be available until you press ENTER) and you will exit nano.
 
-Al hacer eso aparecerá en medio de Termux:
+When doing that it will appear in the middle of Termux:
 
 ```
 File Name to Write:<tconfig
 ```
 
-Esa es la abreviatura del archivo: .gitconfig. Usted no cambie nada y solo presione ENTER (Si usted cambia el nombre y presiona ENTER se creará otro archivo conteniendo lo que haya editado).
+That is the abbreviation of the file: .gitconfig. You do not change anything and just press ENTER (If you change the name and press ENTER another file will be created containing what you have edited).
 
-Además si desea puede ver un tutorial que hice:
+In addition you can see a tutorial that I made:
 
-**Cómo usar nano en la terminal de Linux para editar archivos de texto**  
-[https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html](https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html)  
+**How to use nano in the Linux terminal to edit text files**
+[https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html](https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html)
 
-## Modificar gitconfig con Vim
+## Modify gitconfig with Vim
 
-Para usar Vim ejemplo para editar el archivo .gitconfig
+To use Vim example to edit the .gitconfig file
 
-Para editar el archivo de configuración de git escriba:
+To edit the git configuration file write:
 
 ```bash
 vim ~/.gitconfig
 ```
 
-Advertencia: Debe tener cuidado de no borrar algo del código pues si lo hace se le dañará git. Si eso llegara a pasar escriba:
+Warning: You must be careful not to delete something from the code because if you do it will damage git. If that were to happen write:
 
 ```bash
 rm ~/.gitconfig
 ```
 
-y vuelva a identificarse.
+and identify yourself again.
 
-Editando: Una vez que aparece el entorno del editor Vim estaremos por defecto en el modo de comando, y si queremos editar presionemos una vez la tecla:
+Editing: Once the Vim editor environment appears we will be by default in command mode, and if we want to edit press once the key:
 
 i
 
-al hacerlo se cambiará al modo de edición y edite.
-Una vez que ya no quiera seguir editando presione:
+when doing so it will change to edit mode and edit.
+Once you no longer want to continue editing press:
 
 ESC
 
-que es para cambiar al modo de comandos.
+which is to change to command mode.
 
-Para guardar presione:
+To save press:
 
 ```
 :w
 ```
 
-> **Nota:** Esa w significa write = escribir
+> **Note:** That w means write = write
 
-y presione:
+and press:
 
 ENTER
 
-Para dejar de escribir o salir de Vim, use el comando:
+To stop writing or exit Vim, use the command:
 
 ```
 :q
 ```
 
-y presione ENTER.
+and press ENTER.
 
-Para guardar un archivo y salir de Vim simultáneamente, use el comando:
+To save a file and exit Vim simultaneously, use the command:
 
 ```
 :wq
 ```
 
-y presione ENTER
+and press ENTER
 
-o el comando:
+or the command:
 
 ```
 :x
 ```
 
-Además si desea puede ver un tutorial que hice:
+In addition you can see a tutorial that I made:
 
-**Cómo instalar y usar Vim editor de archivos para terminal, en Linux**  
+**How to install and use Vim terminal text editor, in Linux**
 [https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-y-usar-vim-editor-de-texto-de-terminal.html](https://facilitarelsoftwarelibre.blogspot.com/2025/04/como-instalar-y-usar-vim-editor-de-texto-de-terminal.html)
 
-## Para moverse a la izquierda o derecha en Vim y Nano
+## To move left or right in Vim and Nano
 
-En Termux en las versiones modernas ya se incluyen flechas para moverse, pero también se puede teniendo presionado el botón para subir el volumen y las teclas, para:
+In Termux in modern versions arrows are already included to move, but you can also by holding the volume up button and the keys, for:
 
-Moverse a la Izquierda:
-Volumen Arriba + A
+Move to the Left:
+Volume Up + A
 
-o para:
+or for:
 
-Moverse a la derecha:
-Volumen Arriba + D
+Move to the right:
+Volume Up + D
 
 # Git Merge
 
-Necesitará usar Nano o Vim dentro de Termux para poder hacer un Merge. También puedes revisar el siguiente tutorial:
+You will need to use Nano or Vim inside Termux to be able to do a Merge. You can also check the following tutorial:
 
-**Cómo hacer merge con git**
+**How to do merge with git**
 [https://github.com/wachin/como-hacer-merge-con-git](https://github.com/wachin/como-hacer-merge-con-git)
 
-# Cómo actualizar el Token
+# How to update the Token
 
-Si usted, por ejemplo, le puso expiración de 90 días tendrá que generar otro token y reemplazar el anterior, porque le saldrá este error si hace push, fetch u otro comando:
+If you, for example, put an expiration of 90 days you will have to generate another token and replace the previous one, because you will get this error if you do push, fetch or another command:
 
 ```
 $ git fetch
@@ -885,32 +878,32 @@ fatal: Authentication failed for 'https://github.com/wachin/wid2/'
 /sdcard/wid2 $
 ```
 
-hasta que usted no lo cambie. Para cambiarlo escriba:
+until you change it. To change it write:
 
 ```bash
 nano ~/.git-credentials
 ```
 
-y arreglar la siguiente línea:
+and fix the following line:
 
 ```
-https://usuario:ghp_yjikgsrtG3hjkrt4uihfhjk6G7KvhW8werOHKGRY@github.com
+https://user:ghp_yjikgsrtG3hjkrt4uihfhjk6G7KvhW8werOHKGRY@github.com
 ```
 
-Cambie usuario por su usuario, cambie el token por su token, guarde el cambio y salga, y vuelva a hacer lo que estaba haciendo y funcionará.
+Change user for your user, change the token for your token, save the change and exit, and go back to doing what you were doing and it will work.
 
-# Errores comunes
+# Common errors
 
 ## Error "dpkg was interrupted"
 
-Es posible que le salga este error algún día:
+It is possible that this error comes out to you some day:
 
 ```
 list --upgradable' to see them.
 E: dpkg was interrupted, you must manually run 'dpkg --configure -a' to correct the problem.
 ```
 
-Escriba:
+Write:
 
 ```bash
 dpkg --configure -a
@@ -923,7 +916,7 @@ dpkg --configure -a
 E: Unmet dependencies. Try 'apt --fix-broken install' with no packages (or specify a solution).
 ```
 
-Escriba:
+Write:
 
 ```bash
 apt --fix-broken install
@@ -935,9 +928,9 @@ Att. Washington Indacochea Delgado
 linuxfrontier@proton.me
 2024
 
-Dios les bendiga
+God bless you
 
-# Consultas
+# Queries
 
 - [Termux Setup Storage](https://wiki.termux.com/wiki/Termux-setup-storage)
 - [How to exit vi editor in Termux](https://whys.video/12605_fdroid_termux/684819_How_do_I_exit_vi_editor_in_Termux)
@@ -945,5 +938,5 @@ Dios les bendiga
 - [How to change working directory in Termux](https://bit.ly/36sFQuI)
 - [Cómo cambiar el directorio de trabajo en Termux](https://stackoverflow.com/a/68806210)
 - [How to Fix Git Always Asking For User Credentials For HTTP(S) Authentication](https://bit.ly/3qBS5vS)
-  Imagen: https://bit.ly/3urispG
+  Image: https://bit.ly/3urispG
 - ['CANNOT LINK EXECUTABLE "node": library "libcrypto.so.3" not found](https://stackoverflow.com/questions/71337612/cannot-link-executable-node-library-libcrypto-so-3-not-found)
