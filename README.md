@@ -1,5 +1,12 @@
 # Termux on Android to install Linux terminal programs like: git, yt-dlp, nnn, tree, and others
 
+---
+
+Tutorial en español aquí:
+[README_ES.md](README_ES.md)
+
+---
+
 **Updated: 2026**
 
 Termux is a terminal emulator and Linux environment for Android that allows you to install and use git as you would from a Linux terminal. You can also install other programs like yt-dlp (for downloading YouTube videos), nnn (File Manager), tree, and others that can be used from the terminal.
